@@ -13,14 +13,14 @@ RegisterServerEvent('vC-realsticWeaponDrop:server:removeforEveryone', function(i
             if Player.Functions.AddItem(item, 1,false,info) then
                 takeds[serie] = 'taked'
                 local label = QBCore.Shared.Items[item].label
-                TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, 'You Picked Up A '..label..' With Serial Number '..serie..' !')
+                TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, 'Zvedl jsi '..label..' se sériovým číslem ' ..serie..' !')
                 TriggerClientEvent('vC-realsticWeaponDrop:client:removeforEveryone',-1, serie)
                 Citizen.Wait(5000)
                 takeds[serie] = nil
                 return
             else
                         takeds[serie] = nil
-                TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, 'You are too full to pick up this weapon!', 'error')
+                TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, 'Jsi příliš plný, abys sebral tuto zbraň!', 'error')
             end
     end
 end)
