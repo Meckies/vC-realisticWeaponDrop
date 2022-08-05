@@ -7,6 +7,6 @@ vCode.PickupDistance = 2.5
 
 vCode.Text = {
     h = '[H]',
-    pickup = 'Pick Up',
-    progressbar = 'Picking Up '
+    pickup = 'Zvednout',
+    progressbar = 'Zvedání'
 }
